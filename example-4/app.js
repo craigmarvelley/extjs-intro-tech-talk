@@ -5,6 +5,10 @@ Ext.application({
             layout: 'fit'
         });
 
+        this.createWindow(viewport);
+    },
+
+    createWindow: function (viewport) {
         var window = Ext.create('Ext.window.Window', {
             title: 'A window',
             height: 200,

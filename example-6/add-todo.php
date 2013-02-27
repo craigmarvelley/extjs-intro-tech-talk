@@ -1,6 +1,7 @@
 <?php
 
-header('Status: 200');
+header('Status: 201');
+header('Content-type: application/json');
 
 echo json_encode(array(
     'success' => true,

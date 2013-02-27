@@ -5,7 +5,7 @@ Ext.application({
             layout: 'fit',
             items: [
                 {
-                    title: 'A form panel example',
+                    title: 'Create a TODO item',
                     xtype: 'form',
                     url: 'add-todo.php',
                     defaults: {

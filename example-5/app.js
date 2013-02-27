@@ -9,19 +9,36 @@ Ext.application({
                 tbar: [
                     {
                         xtype: 'button',
-                        text: 'Button 1',
+                        text: 'New window',
                         handler: function () {
                             increment += 10;
 
                             this.createWindow(viewport, increment, increment);
                         },
                         scope: this
+                    },
+                    {
+                        xtype: 'button',
+                        text: 'Options',
+                        menu: {
+                            items: [
+                                {
+                                    text: 'Close all',
+                                    handler: function () {
+                                        Ext.WindowManager.each(function (window) {
+                                            if (window.getXType() === 'window') {
+                                                window.close();
+                                            }
+                                        });
+                                    },
+                                    scope: this
+                                }
+                            ]
+                        }
                     }
                 ]
             }
         });
-
-
     },
 
     createWindow: function (viewport, x, y) {

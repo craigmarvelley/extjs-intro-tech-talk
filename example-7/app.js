@@ -18,7 +18,7 @@ Ext.application({
         var store = Ext.create('Ext.data.Store', {
             id: 'todoStore',
             autoLoad: true,
-            fields:['title', 'importance'],
+            fields:['title', 'details', 'importance'],
             proxy:{
                 type: 'ajax',
                 url: 'todos.php',
